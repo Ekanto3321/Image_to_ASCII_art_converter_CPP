@@ -5,13 +5,17 @@ using namespace std;
 
 string s, ip, op, opt;
 
-string fname = "ss";
+string fname = "high";
 
 int avg(uint8_t a, uint8_t b, uint8_t c){
     return (a+b+c)/3;
 }
 
-int main(){
+int main(int argc, char* argv[]){
+
+    if (argc > 1) {
+        fname = argv[1];  
+    } 
 
     ip = "./input/"+fname+".ppm";
     op = "./output/"+fname+".ppm";
